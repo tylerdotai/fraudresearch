@@ -12,7 +12,7 @@
 
 # AI Against American Fraud
 
-**[Visit the website](https://tylerdotai.github.io/fraudresearch/)** | [Meet the artwork and Hermes mashup](site/README.md)
+**[Visit the website](https://aiagainstamericanfraud.com/)** | [Meet the artwork and Hermes mashup](site/README.md)
 
 FraudResearch is an independent, open-source research toolkit and [Hermes Agent](https://hermes-agent.nousresearch.com/docs/) profile. Its mission is to help tackle fraud in America with AI, public records, evidence preservation and human review.
 

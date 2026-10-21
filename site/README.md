@@ -25,7 +25,7 @@ FRAUDRESEARCH_SITE_PREVIEW=1 bun run test:e2e
 
 Production assets use relative URLs, so the same build works at a custom-domain root or a GitHub Pages project path. Local tests serve the root on strict loopback port 4179; override FRAUDRESEARCH_SITE_PORT if needed. They never take over another server. Playwright traces, screenshots, JSON results and the HTML report stay in ignored test-results/ and playwright-report/.
 
-To repeat the same checks against the deployed site without starting a local server, run `FRAUDRESEARCH_SITE_URL=https://tylerdotai.github.io/fraudresearch/ bun run test:e2e`. The no-third-party-request assertion permits only the configured origin, including its protocol and port. Receipts remain local.
+To repeat the same checks against the deployed site without starting a local server, run `FRAUDRESEARCH_SITE_URL=https://aiagainstamericanfraud.com/ bun run test:e2e`. The no-third-party-request assertion permits only the configured origin, including its protocol and port. Receipts remain local.
 
 Browser tests cover desktop/mobile layouts, source and install links, clipboard, mobile navigation, keyboard entry, real shadcn controls, axe accessibility, artwork loading, copy constraints and absence of automatic third-party requests. Automated accessibility checks are not a full human accessibility audit.
 
@@ -53,6 +53,6 @@ The default standalone build targets `https://aiagainstamericanfraud.com/`. Over
 
 CI reads the repository's actual configured Pages URL through the pinned configure-pages action, then uses that same URL for the build and browser assertions. It does not prematurely canonicalize an unconnected domain. After DNS ownership, web routing, Pages custom-domain configuration and HTTPS are ready, a push/re-run emits the new origin automatically. A CNAME file alone does not configure an Actions-deployed site.
 
-For the current project address, use `PUBLIC_SITE_URL=https://tylerdotai.github.io/fraudresearch/ bun run build` and pass the same variable with the local production browser command. For a live check, FRAUDRESEARCH_SITE_URL supplies the expected canonical when PUBLIC_SITE_URL is unset. Verify both apex/www redirects and the previous Pages URL after a real cutover. Preserve existing mail/verification DNS records and do not use wildcard records.
+For a historical project-path build or fallback, use `PUBLIC_SITE_URL=https://tylerdotai.github.io/fraudresearch/ bun run build` and pass the same variable with the local production browser command. The active custom-domain build uses `https://aiagainstamericanfraud.com/`. For a live check, FRAUDRESEARCH_SITE_URL supplies the expected canonical when PUBLIC_SITE_URL is unset. Verify both apex/www redirects and the previous Pages URL after a real cutover. Preserve existing mail/verification DNS records and do not use wildcard records.
 
 Source and contribution entry points explicitly open the latest main branch. Individual GitHub file pages can still show an older commit as that file's last change; this is not a pinned website link or the current branch's build status. The footer links the main-branch build history separately.
