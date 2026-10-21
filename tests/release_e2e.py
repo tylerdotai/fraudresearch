@@ -13,7 +13,7 @@ import tempfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-BASE = Path(os.environ.get('TMPDIR', str(ROOT / '.scratch')))
+BASE = Path(os.environ.get('TMPDIR', str(Path.home() / '.cache' / 'fraudresearch' / 'acceptance')))
 BASE.mkdir(parents=True, exist_ok=True)
 SCRATCH = Path(tempfile.mkdtemp(prefix='release-e2e-', dir=BASE))
 EVENTS = []

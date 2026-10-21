@@ -129,7 +129,7 @@
     "src/fraudlab/settings.py": "bed386add4c5f20e70cae487766b3175ad52222aac19b9a5d9091020792f5678",
     "tests/e2e.py": "d8619d7629118b15ccbeb9e78617f861f7f26bd4d186a8722341f05cef6673b1",
     "tests/hermes_e2e.py": "1bb0b126fab6688066166b9703e8c3af88692f947a794d48809b3e96577e16da",
-    "tests/release_e2e.py": "fbbad8be2f2c63e73f331c19dc4e7635a6fd9e7d8a6105dee6bf37ee761c87c1",
+    "tests/release_e2e.py": "f0db6e155a6e38522ebeefc534c62d11fdad2418ac08c60b5d03ad465f27be42",
     "tests/upgrade_e2e.py": "6f5d79ce54d999f7050b974fa44095bcee9507847e3638a23f2699ca4296378d",
     "uv.lock": "f19bb3b49827d90fae910157342dd86f10703c3ada62d0bfb82ea0d6f52ebb88"
   },
