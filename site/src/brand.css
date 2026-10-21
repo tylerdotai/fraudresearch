@@ -1,0 +1,85 @@
+/* Community Americana art direction. shadcn primitives remain upstream components. */
+.hero-stage { background: #142b45; color: #faf8f2; border-bottom: 8px solid #bd302e; }
+.hero-stage .hero { grid-template-columns: 1.15fr 1fr; padding-block: 52px 44px; gap: 52px; }
+.hero-stage .eyebrow { color: #f2c9a7; font-size: 10px; letter-spacing: 1.9px; }
+.hero-stage .eyebrow span { background: #f05d4b; width: 8px; height: 8px; }
+.hero h1 { font-family: "Arial Black", "Franklin Gothic Heavy", Arial, sans-serif; font-size: clamp(46px, 5vw, 72px); line-height: .92; letter-spacing: -2.7px; font-weight: 950; text-transform: uppercase; margin-bottom: 29px; }
+.hero h1 > span { display: block; font-size: clamp(66px, 7.5vw, 108px); letter-spacing: -4px; margin-top: 7px; }
+.hero h1 em { display: block; font-size: clamp(105px, 11.5vw, 166px); color: #f15b4a; font-style: normal; font-weight: 950; letter-spacing: -7px; margin-top: 4px; }
+.hero-stage .hero-description { color: #d5dfe7; font-size: 15px; max-width: 455px; margin-top: 30px; }
+.hero-stage .hero-actions [data-variant="default"] { background: #bd302e; color: white; }
+.hero-stage .hero-actions [data-variant="default"]:hover { background: #a62625; }
+.hero-stage .hero-actions [data-variant="outline"] { background: transparent; color: #faf8f2; border-color: #8997a6; }
+.hero-stage .hero-actions [data-variant="outline"]:hover { background: #253d55; }
+.hero-stage .hero-note { color: #d5dfe7; font-size: 10px; margin-top: 19px; }
+.hermes-lockup { display: flex; width: fit-content; align-items: center; gap: 11px; margin-top: 34px; text-decoration: none; color: #d5dfe7; }
+.hermes-lockup img { width: 41px; height: 41px; }
+.hermes-lockup span { font-size: 8px; letter-spacing: 1.3px; line-height: 1.6; }
+.hermes-lockup strong { display: block; font-size: 17px; letter-spacing: 2.7px; color: #faf8f2; }
+.hermes-lockup > svg { width: 14px; height: 14px; margin-left: 9px; }
+.eagle-hero { margin: 0; position: relative; }
+.mascot-eyebrow { display: flex; justify-content: space-between; font-family: ui-monospace, monospace; font-size: 8px; letter-spacing: 1.3px; color: #d5dfe7; border-top: 1px solid #7e8e9b; padding-block: 13px; }
+.eagle-hero .mascot-image { display: block; width: 100%; height: 535px; object-fit: contain; background: #0c273f; }
+.mascot-tagline { position: absolute; right: -12px; bottom: 48px; padding: 15px 19px; background: #bd302e; color: #faf8f2; transform: rotate(-4deg); font-family: "Arial Black", Arial, sans-serif; font-size: 18px; font-weight: 900; letter-spacing: -.5px; line-height: 1.08; border: 2px solid #faf8f2; }
+.mascot-tagline span { color: #ffe0a3; }
+.eagle-hero figcaption { font-size: 8px; line-height: 1.7; color: #c0ccd6; margin-top: 10px; max-width: 440px; }
+h2 { font-family: "Arial Black", "Franklin Gothic Heavy", Arial, sans-serif; font-size: 38px; font-weight: 850; line-height: 1.07; text-transform: uppercase; letter-spacing: -1.6px; }
+h2 em { font-style: normal; font-weight: 850; }
+.standards { padding-block: 32px; }
+.standards strong { text-transform: uppercase; font-size: 12px; letter-spacing: .3px; }
+.hermes-feature { background: #e8e4d9; border-bottom: 1px solid #d7d0c2; padding-block: 66px; }
+.hermes-feature-grid { display: grid; grid-template-columns: .8fr 1fr; align-items: center; gap: 96px; }
+.hermes-feature figure { margin: 0; max-width: 400px; }
+.hermes-feature figure img { width: 100%; height: 470px; object-fit: cover; object-position: center 21%; border-bottom: 6px solid #bd302e; }
+.hermes-feature figcaption { color: #535e68; font-size: 9px; margin-top: 10px; line-height: 1.6; }
+.hermes-feature h2 { font-size: 43px; }
+.hermes-feature p:not(.eyebrow) { font-size: 14px; line-height: 1.85; color: #535e68; }
+.hermes-feature ul { list-style: none; margin: 25px 0; padding: 0; }
+.hermes-feature li { border-top: 1px solid #bfc1b9; padding-block: 12px; font-size: 12px; line-height: 1.7; }
+.hermes-feature [data-slot="button"] { background: transparent; border-color: #89939b; font-size: 12px; }
+.hermes-feature p.community-note { font-size: 10px; margin: 17px 0 0; }
+.community-section { background: #142b45; color: #faf8f2; padding-block: 67px; }
+.community-grid { display: grid; grid-template-columns: 1.1fr .9fr; align-items: center; gap: 95px; }
+.community-section .eyebrow { color: #f3bd9e; }
+.community-section h2 { font-size: 43px; }
+.community-section h2 em { color: #f59d83; }
+.community-section p:not(.eyebrow) { color: #d5dfe7; font-size: 13px; line-height: 1.85; max-width: 460px; margin-bottom: 25px; }
+.community-section [data-slot="button"] { background: #faf8f2; color: #142b45; border: 0; font-size: 12px; }
+.community-grid > img { width: 100%; height: auto; display: block; border-bottom: 6px solid #bd302e; }
+.patriotic-band { position: relative; background: #142b45 url('/patriotic-banner.webp') center center / cover no-repeat; padding-block: 74px; border-block: 5px solid #bd302e; }
+.patriotic-band::before { content: ""; position: absolute; inset: 0; background: #142b45; opacity: .35; }
+.patriotic-band .shell { position: relative; }
+.patriotic-band p { font-family: "Arial Black", Arial, sans-serif; color: #faf8f2; font-weight: 900; font-size: 46px; line-height: 1.05; letter-spacing: -1px; margin-bottom: 17px; }
+.patriotic-band strong { color: #ffe0a3; }
+.patriotic-band span { color: #faf8f2; font-size: 12px; }
+
+@media (max-width: 1050px) {
+  .hero-stage .hero { gap: 35px; }
+  .eagle-hero .mascot-image { height: 490px; }
+  .mascot-tagline { right: -3px; font-size: 16px; }
+  .hermes-feature-grid, .community-grid { gap: 55px; }
+}
+@media (max-width: 760px) {
+  .hero-stage .hero { grid-template-columns: 1fr; gap: 40px; padding-block: 43px 32px; }
+  .hero h1 { font-size: clamp(36px, 9vw, 60px); letter-spacing: -1.4px; }
+  .hero h1 > span { font-size: clamp(50px, 14.4vw, 78px); letter-spacing: -2.4px; }
+  .hero h1 em { font-size: clamp(80px, 24.5vw, 130px); letter-spacing: -4px; }
+  .hero-stage .eyebrow { font-size: 8px; letter-spacing: 1.4px; }
+  .hero-stage .hero-description { font-size: 13px; margin-top: 23px; }
+  .hermes-lockup { margin-top: 28px; }
+  .hero-stage .hero-note { font-size: 9px; }
+  .eagle-hero .mascot-image { height: 440px; }
+  .mascot-tagline { right: -3px; bottom: 43px; font-size: 17px; }
+  .hermes-feature, .community-section { padding-block: 48px; }
+  .hermes-feature-grid { grid-template-columns: 1fr; gap: 32px; }
+  .hermes-feature figure { max-width: 420px; margin-inline: auto; width: 100%; }
+  .hermes-feature figure img { height: 430px; }
+  .hermes-feature h2, .community-section h2 { font-size: 35px; }
+  .hermes-feature p:not(.eyebrow) { font-size: 13px; }
+  .community-grid { grid-template-columns: 1fr; gap: 32px; }
+  .community-grid > img { width: min(100%, 420px); margin-inline: auto; }
+  .patriotic-band { padding-block: 58px; background-position: 62% center; }
+  .patriotic-band::before { opacity: .74; }
+  .patriotic-band p { font-size: 32px; }
+  .patriotic-band span { font-size: 10px; }
+}

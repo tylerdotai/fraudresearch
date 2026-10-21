@@ -1,0 +1,22 @@
+name: Bug report
+description: Report a reproducible software problem using synthetic data only.
+body:
+  - type: markdown
+    attributes:
+      value: "Do not post fraud allegations, personal information, credentials or evidence. Use synthetic reproductions."
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Synthetic reproduction and command
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected and actual behavior (sanitized)
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Python, uv and project versions

@@ -1,0 +1,7 @@
+name: research-local-web
+version: 0.1.0
+description: "Portable loopback SearXNG/Crawl4AI provider with bounded public .gov originals."
+author: FraudResearch contributors
+kind: backend
+provides_web_providers:
+  - research-local

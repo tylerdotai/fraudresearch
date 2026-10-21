@@ -1,0 +1,84 @@
+.graphic-logo { width: 54px; height: 54px; object-fit: contain; mix-blend-mode: multiply; flex-shrink: 0; }
+.wordmark { gap: 10px; }
+.reading-progress[data-slot="progress"] { position: fixed; inset: 0 0 auto; height: 3px; z-index: 90; border-radius: 0; background: transparent; pointer-events: none; }
+.reading-progress [data-slot="progress-indicator"] { background: #ef6251; transition: transform 150ms linear; }
+.official-section { padding-block: 65px; background: #f4f0e6; border-block: 1px solid #d7d0c2; }
+.official-intro { display: flex; justify-content: space-between; align-items: end; gap: 75px; }
+.official-intro h2 { margin-bottom: 0; }
+.official-intro > p { color: #535e68; font-size: 14px; line-height: 1.8; max-width: 425px; margin-bottom: 0; }
+.official-metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 35px; margin: 39px 0 23px; }
+.official-metrics > div { display: flex; flex-direction: column; padding-block: 24px 18px; border-top: 3px solid #a73730; }
+.official-metrics dd { order: -1; margin: 0 0 15px; font-family: "Arial Black", Arial, sans-serif; font-weight: 900; font-size: 55px; letter-spacing: -2px; line-height: 1; color: #142b45; }
+.official-metrics dt { font-size: 14px; font-weight: 650; }
+.official-metrics dt span { display: block; margin-top: 7px; font-size: 11px; font-weight: 400; color: #59616a; }
+.official-citation { font-size: 12px; line-height: 1.9; color: #535e68; max-width: 950px; margin-bottom: 0; }
+.official-citation a { text-decoration: underline; text-underline-offset: 3px; }
+.official-citation strong { font-weight: 650; }
+.installation [data-slot="tabs"] { margin-top: 20px; }
+.installation [data-slot="tabs-list"] { background: #2b435b; border-radius: 3px; }
+.installation [data-slot="tabs-trigger"] { color: #d8e1e7; font-size: 12px; padding-inline: 17px; }
+.installation [data-slot="tabs-trigger"][data-state="active"] { background: #faf8f2; color: #142b45; }
+.installation [data-slot="tabs-content"] .command-row { padding-top: 16px; }
+.command-row code { white-space: pre-wrap; }
+.command-row button { color: #142b45; background: #faf8f2; }
+.site-footer { padding: 0; background: #eeece4; border-top: 1px solid #d4d0c5; }
+.footer-brand-row { display: flex; align-items: center; justify-content: space-between; gap: 35px; padding-block: 46px 37px; border-bottom: 1px solid #c9cbc4; }
+.footer-brand { display: flex; align-items: center; gap: 14px; text-decoration: none; }
+.footer-brand > img { width: 62px; height: 62px; object-fit: contain; mix-blend-mode: multiply; }
+.footer-brand > span { font-size: 24px; font-weight: 750; letter-spacing: -.6px; }
+.footer-brand small { display: block; font-size: 8px; letter-spacing: 1.7px; font-weight: 600; margin-top: 7px; }
+.footer-brand-row > p { font-size: 13px; line-height: 1.8; color: #535e68; margin: 0; }
+.footer-brand-row > p strong { color: #142b45; }
+.footer-columns { display: grid; grid-template-columns: repeat(4, 1fr); gap: 35px; padding-block: 36px; }
+.footer-columns h2 { font: 700 11px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; letter-spacing: .8px; text-transform: uppercase; margin-bottom: 16px; }
+.footer-columns ul { list-style: none; padding: 0; margin: 0; }
+.footer-columns li { margin-bottom: 10px; }
+.footer-columns a { display: inline-block; font-size: 12px; color: #535e68; text-decoration: none; line-height: 1.8; padding-block: 2px; }
+.footer-columns a:hover { color: #8e372f; text-decoration: underline; text-underline-offset: 4px; }
+.footer-boundary { border-block: 1px solid #c9cbc4; padding-block: 23px; }
+.footer-boundary strong { font-size: 12px; color: #8e372f; }
+.footer-boundary p { margin: 8px 0 0; font-size: 11px; line-height: 1.85; color: #535e68; max-width: 870px; }
+.footer-legal { padding-top: 24px; display: flex; justify-content: space-between; gap: 40px; }
+.footer-legal p { max-width: 650px; color: #59616a; font-size: 11px; line-height: 1.9; margin: 0; }
+.footer-briefs { display: flex; flex-wrap: wrap; gap: 24px; padding-block: 20px 31px; }
+.footer-briefs a { font-size: 10px; color: #535e68; text-underline-offset: 3px; }
+[data-slot="button"] .lucide-arrow-up-right, [data-slot="button"] .lucide-arrow-right { transition: transform 180ms ease; }
+[data-slot="button"]:hover .lucide-arrow-up-right { transform: translate(2px, -2px); }
+[data-slot="button"]:hover .lucide-arrow-right { transform: translateX(3px); }
+
+@media (prefers-reduced-motion: no-preference) {
+  .mascot-image { animation: eagle-float 4s ease-in-out 1; }
+  .motion-section { opacity: 0; transform: translateY(15px); transition: opacity 500ms ease, transform 500ms ease; }
+  .motion-section.is-visible { opacity: 1; transform: translateY(0); }
+  [data-slot="tabs-content"][data-state="active"] { animation: panel-entry 180ms ease-out; }
+  .graphic-logo { transition: transform 200ms ease; }
+  .wordmark:hover .graphic-logo { transform: rotate(-5deg); }
+}
+@keyframes eagle-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+@keyframes panel-entry { from { opacity: .5; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
+@media (prefers-reduced-motion: reduce) {
+  .mascot-image { animation: none !important; }
+  .motion-section { opacity: 1 !important; transform: none !important; transition: none !important; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+@media (max-width: 760px) {
+  .graphic-logo { width: 44px; height: 44px; }
+  .official-section { padding-block: 47px; }
+  .official-intro { display: block; }
+  .official-intro > p { margin-top: 23px; font-size: 13px; }
+  .official-metrics { grid-template-columns: 1fr; gap: 5px; margin-top: 27px; }
+  .official-metrics > div { border-top-width: 2px; padding-block: 21px; }
+  .official-metrics dd { font-size: 54px; margin-bottom: 11px; }
+  .official-citation { font-size: 11px; }
+  .installation [data-slot="tabs-list"] { width: 100%; }
+  .installation [data-slot="tabs-trigger"] { font-size: 11px; padding-inline: 9px; }
+  .footer-brand-row { display: block; padding-block: 35px 26px; }
+  .footer-brand > img { width: 55px; height: 55px; }
+  .footer-brand > span { font-size: 22px; }
+  .footer-brand-row > p { margin-top: 22px; font-size: 12px; }
+  .footer-columns { grid-template-columns: 1fr 1fr; gap: 26px 18px; padding-block: 29px; }
+  .footer-columns h2 { font-size: 10px; }
+  .footer-columns a { font-size: 11px; }
+  .footer-legal { flex-direction: column; gap: 14px; }
+  .footer-briefs { gap: 15px; }
+}

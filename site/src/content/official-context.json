@@ -1,0 +1,32 @@
+{
+  "source_url": "https://america.gov/fraud",
+  "source_title": "America.gov: By the numbers",
+  "retrieved_at": "2026-10-21T01:01:57.484812+00:00",
+  "original_sha256": "f6aec68ef0bf0af2911b3f93dbab65543a117b317ae526f321dfc97a3f7fdbc8",
+  "source_locators": [
+    {
+      "html_line": 109,
+      "marker": "Total / All partner agencies / $260.7B / $72.0B / $58.9B"
+    }
+  ],
+  "row": "Total / All partner agencies",
+  "classification": "Government-reported aggregate context, not independently audited here and not FraudResearch results",
+  "metrics": [
+    {
+      "display": "$260.7B",
+      "label": "Uncovered",
+      "period": "Since Jan 2025"
+    },
+    {
+      "display": "$72.0B",
+      "label": "Stopped per year",
+      "period": "Annualized"
+    },
+    {
+      "display": "$58.9B",
+      "label": "Recovered",
+      "period": "Since Jan 2025"
+    }
+  ],
+  "caution": "Different measures and periods. Do not add these categories. No estimate of total U.S. fraud or toolkit impact is inferred."
+}

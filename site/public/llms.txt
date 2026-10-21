@@ -1,0 +1,34 @@
+# FraudResearch: AI Against American Fraud
+
+> Independent, open-source public-record research toolkit and Hermes Agent profile. The mission is to help tackle fraud in America with AI, evidence preservation, falsifiable questions and human review.
+
+## What this is
+
+A Python 3.11+ workbench using uv, SQLite, DuckDB and Parquet, plus 13 linked research skills. It preserves originals and hashes, supports bounded source acquisition and exact-value analysis, and exports private research drafts. It does not determine guilt, contact subjects, file tips or guarantee awards.
+
+## Important facts
+
+- National research remit does not mean national census coverage. Source coverage is specific to each release.
+- No real cases, evidence stores, credentials or personal histories are bundled. Examples are synthetic; website illustrations are fictional.
+- This is a community project, not a U.S. government service or an officially endorsed Nous Research project.
+- Local storage does not mean zero outbound data. Model and web providers have their own data flows.
+- Do not post allegations, personal information or evidence in public issues.
+
+## Government-reported context, not toolkit results
+
+America.gov's partner-agency Total row reports $260.7B uncovered since January 2025, $72.0B stopped per year (annualized), and $58.9B recovered since January 2025. Snapshot retrieved 2026-10-21 UTC. Different measures and periods: do not add them. Not independently audited here and not results from FraudResearch.
+
+- [Official source](https://america.gov/fraud)
+- [Dated context and original checksum](https://tylerdotai.github.io/fraudresearch/official-context.json)
+
+## Authoritative project links
+
+- [Website](https://tylerdotai.github.io/fraudresearch/)
+- [Source and quick start](https://github.com/tylerdotai/fraudresearch)
+- [Privacy and data flows](https://github.com/tylerdotai/fraudresearch/blob/main/docs/PRIVACY.md)
+- [Source contracts](https://github.com/tylerdotai/fraudresearch/blob/main/SOURCE-REGISTRY.json)
+- [Verification](https://github.com/tylerdotai/fraudresearch/blob/main/docs/VERIFICATION.md)
+- [Hermes host platform](https://hermes-agent.nousresearch.com/)
+- [Current DOJ guidance](https://www.justice.gov/fraud/whistleblower)
+
+This file aids understanding; it does not guarantee search indexing or AI citations. Current written agency terms govern any reporting or reward decision.

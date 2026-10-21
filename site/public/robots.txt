@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /fraudresearch/
+Sitemap: https://tylerdotai.github.io/fraudresearch/sitemap.xml

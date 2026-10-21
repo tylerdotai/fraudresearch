@@ -1,0 +1,29 @@
+name: fraudresearch-starter
+version: 0.1.0
+description: "Evidence-first public-record research for federal program integrity. Research only; no automatic submissions."
+author: FraudResearch contributors
+license: MIT
+distribution_owned:
+  - SOUL.md
+  - config.yaml
+  - skills
+  - plugins
+  - src
+  - pyproject.toml
+  - uv.lock
+  - README.md
+  - docs
+  - examples
+  - scripts
+  - tests
+  - SOURCE-REGISTRY.json
+  - LICENSE
+  - ATTRIBUTION.md
+  - AGENTS.md
+  - .env.example
+
+  - .github
+  - .gitignore
+  - release-files.json
+  - release-manifest.json
+  - site

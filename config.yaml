@@ -1,0 +1,9 @@
+# Generic provider defaults only. Configure your own model through Hermes setup.
+web:
+  search_backend: research-local
+  extract_backend: research-local
+  keyless_fallback: false
+  keyless_rescue: false
+plugins:
+  enabled:
+    - web/research_local

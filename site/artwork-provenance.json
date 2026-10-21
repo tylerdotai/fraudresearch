@@ -1,0 +1,81 @@
+{
+  "kind": "Fictional community brand illustrations, original eagle logo and derived social card; not documentary evidence",
+  "generation_provider": "OpenAI Codex auth through installed Hermes image provider; backend-managed rendering engine",
+  "references": [
+    {
+      "name": "Nous girl",
+      "source_url": "https://raw.githubusercontent.com/NousResearch/hermes-agent/main/apps/desktop/public/nous-girl.png",
+      "sha256": "4b75d873f29e3f330c7f9032051555b66218cf11e5a470876f3e0754cb32bc8e",
+      "upstream_repository": "https://github.com/NousResearch/hermes-agent",
+      "license_notice": "NOUS-LICENSE.txt"
+    },
+    {
+      "name": "Original eagle mascot",
+      "kind": "Original AI-generated character created for this project; no real person or subject"
+    }
+  ],
+  "privacy": "Re-encoded from a fresh RGB image; original metadata not copied. No source paths, request IDs, credentials or generation receipts included.",
+  "branding": "Community mashup. No government or Nous Research endorsement claimed. Names and marks identify the host platform; trademark rights remain with their owners.",
+  "svg_asset": {
+    "asset": "public/nous-girl.svg",
+    "source_url": "https://raw.githubusercontent.com/NousResearch/hermes-agent/main/assets/nous-girl-white.svg",
+    "original_sha256": "d84d87421e321d94bb210f914e6fd55307e045655ab122446547f516d3aaf06e",
+    "transformation": "Remove editor-specific metadata and namespace attributes; preserve rendering geometry."
+  },
+  "assets": [
+    {
+      "asset": "public/brand-logo.webp",
+      "dimensions": [480, 480],
+      "sha256": "dbb3c0142116e3bee717a71f3aa024a958254cd24ae25996c74a7029752a19e7",
+      "bytes": 22918,
+      "transform": "AI-generated original eagle and research-lens mark, cropped and placed on fresh RGB pixels; metadata-free WebP re-encoding"
+    },
+    {
+      "asset": "public/social-card.webp",
+      "dimensions": [1200, 630],
+      "sha256": "e4d01ad185195454193a560b6222c6b4b8d82e28d5cae70664f40f04945c0df2",
+      "bytes": 111824,
+      "transform": "Original logo and panoramic artwork composed with project lettering on fresh RGB pixels; metadata-free WebP re-encoding"
+    },
+    {
+      "asset": "public/eagle-mascot.webp",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sha256": "d508bab77ad10e67b4b4b8247c75d74b31bdd8977b134fadbf7b6ebce4e4a2f5",
+      "bytes": 383928,
+      "transform": "Fresh RGB re-encoding to WebP; metadata not inherited"
+    },
+    {
+      "asset": "public/nous-mascot.webp",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sha256": "7975faa36054548ae781ff6674ae0d83493f0e7aaf402ade6233059d2ff0ffd8",
+      "bytes": 371956,
+      "transform": "Fresh RGB re-encoding to WebP; metadata not inherited"
+    },
+    {
+      "asset": "public/community-duo.webp",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "sha256": "29437a3163b82fc6c252fef7401d34d89ac2910a1447017e45ee30d771a438db",
+      "bytes": 429130,
+      "transform": "Fresh RGB re-encoding to WebP; metadata not inherited"
+    },
+    {
+      "asset": "public/patriotic-banner.webp",
+      "dimensions": [
+        2057,
+        765
+      ],
+      "sha256": "933d02bf8d29d1ed2df0d084679abfae691de0f6a3c32f172e990e9c8e825eb8",
+      "bytes": 308570,
+      "transform": "Fresh RGB re-encoding to WebP; metadata not inherited"
+    }
+  ]
+}

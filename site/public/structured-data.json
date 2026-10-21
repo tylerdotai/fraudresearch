@@ -1,0 +1,103 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://tylerdotai.github.io/fraudresearch/#project",
+      "name": "FraudResearch",
+      "url": "https://tylerdotai.github.io/fraudresearch/",
+      "logo": "https://tylerdotai.github.io/fraudresearch/brand-logo.webp",
+      "sameAs": [
+        "https://github.com/tylerdotai/fraudresearch"
+      ],
+      "description": "Independent open-source community research project. No government or Nous Research endorsement is claimed."
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://tylerdotai.github.io/fraudresearch/#website",
+      "name": "FraudResearch",
+      "alternateName": "AI Against American Fraud",
+      "url": "https://tylerdotai.github.io/fraudresearch/",
+      "inLanguage": "en-US",
+      "publisher": {
+        "@id": "https://tylerdotai.github.io/fraudresearch/#project"
+      }
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "@id": "https://tylerdotai.github.io/fraudresearch/#software",
+      "name": "FraudResearch",
+      "description": "A Python public-record research workbench and a Hermes Agent profile for evidence preservation, bounded analysis and private drafts. It does not determine guilt or submit reports.",
+      "codeRepository": "https://github.com/tylerdotai/fraudresearch",
+      "programmingLanguage": [
+        "Python",
+        "TypeScript"
+      ],
+      "runtimePlatform": "Python 3.11+ and uv; optional Hermes Agent",
+      "license": "https://github.com/tylerdotai/fraudresearch/blob/main/LICENSE",
+      "author": {
+        "@id": "https://tylerdotai.github.io/fraudresearch/#project"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://tylerdotai.github.io/fraudresearch/#page",
+      "url": "https://tylerdotai.github.io/fraudresearch/",
+      "name": "AI Against American Fraud | FraudResearch",
+      "isPartOf": {
+        "@id": "https://tylerdotai.github.io/fraudresearch/#website"
+      },
+      "about": {
+        "@id": "https://tylerdotai.github.io/fraudresearch/#software"
+      },
+      "inLanguage": "en-US",
+      "image": "https://tylerdotai.github.io/fraudresearch/social-card.webp"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://tylerdotai.github.io/fraudresearch/#questions",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Does this software determine whether someone committed fraud?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. It organizes research and checks structure, not guilt. Names, shared addresses, registry entries and outliers are not proof. A qualified human must assess source meaning, context and any legal conclusion."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are real investigations or personal records included?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. The release contains code, generic methods and synthetic examples. Newly acquired public records can still contain personal information. Store them privately and never post evidence in repository issues."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this an official government project or reporting channel?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. This is an independent open-source project. It does not accept fraud tips, file reports or contact subjects. Use current official guidance before any human-directed reporting decision."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does using the toolkit qualify me for a reward?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No reward or commission is promised. Current written agency terms govern eligibility, originality and required milestones. Social-media announcements, structural checks and public anomalies do not establish entitlement."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does local storage mean no information leaves my machine?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Your selected model may receive prompts and tool output. Search engines and source websites receive queries or requests. This landing page includes no forms or analytics; GitHub Pages may log hosting requests."
+          }
+        }
+      ]
+    }
+  ]
+}

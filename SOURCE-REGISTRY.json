@@ -1,0 +1,175 @@
+{
+  "purpose": "Public connector contracts, not an evidence inventory. No sources or cases are preloaded; availability requires fresh acceptance.",
+  "entries": [
+    {
+      "id": "cms-hospice",
+      "status": "implemented_not_preloaded",
+      "owner": "CMS",
+      "catalog_url": "https://data.cms.gov/provider-data/api/1/metastore/schemas/dataset/items",
+      "dataset_id": "yc9t-dgbk",
+      "scope": "Full current published Hospice General Information CSV snapshot; Medicare certification/provider characteristics, not individual claims or all hospice organizations",
+      "access": "Public, no key",
+      "rights": "Catalog accessLevel public; no blanket redistribution licence asserted",
+      "limitations": [
+        "CCN is not NPI",
+        "Version/period from catalog must accompany analysis",
+        "No evidence of individual fraudulent visits"
+      ]
+    },
+    {
+      "id": "cms-home-health",
+      "status": "implemented_not_preloaded",
+      "owner": "CMS",
+      "catalog_url": "https://data.cms.gov/provider-data/api/1/metastore/schemas/dataset/items",
+      "dataset_id": "6jpm-sxkc",
+      "scope": "Full published Home Health Care Agencies CSV snapshot; quality/provider characteristics, not individual claims",
+      "access": "Public, no key",
+      "rights": "Catalog accessLevel public; no blanket redistribution licence asserted",
+      "limitations": [
+        "Multiple measures may span different periods",
+        "Do not interpret measures as payments",
+        "Check source footnotes/suppression"
+      ]
+    },
+    {
+      "id": "nppes",
+      "status": "implemented_not_preloaded",
+      "url": "https://npiregistry.cms.hhs.gov/api/",
+      "scope": "Organization provider registry, bounded queries of hospice/home health taxonomy",
+      "access": "Public GET, no key; up to 200 rows/query, skip bounded by API",
+      "limitations": [
+        "Not complete national enumeration",
+        "No proof of certification, billing, licensure or wrongdoing"
+      ]
+    },
+    {
+      "id": "agencies",
+      "status": "implemented_not_preloaded",
+      "url": "https://api.usaspending.gov/api/v2/references/toptier_agencies/",
+      "scope": "Federal agency reference records only",
+      "access": "Public GET, no key",
+      "limitations": [
+        "Not award-level or recipient-payment integration",
+        "Does not establish a case funding nexus"
+      ]
+    },
+    {
+      "id": "program-rules",
+      "status": "implemented_not_preloaded",
+      "scope": "Acquire current public portal and written DOJ rules on demand; no snapshots bundled",
+      "command": "fraudlab refresh-rules",
+      "limitations": [
+        "Scope discrepancy recorded in docs/PROGRAM-RULES.md",
+        "Changes need human/agent reading, not automatic legal interpretation"
+      ]
+    },
+    {
+      "id": "hhs-oig-exclusions",
+      "status": "implemented_not_preloaded",
+      "url": "https://oig.hhs.gov/exclusions/",
+      "scope": "Current active LEIE snapshot, catalog-discovered; separate bulk/Parquet store",
+      "command": "fraudlab bulk connector oig-leie --max-bytes 20000000 --max-rows 200000",
+      "limitations": [
+        "Not complete historical exclusion coverage; reinstatement and waivers require dated evidence",
+        "Validate NPI format/check digit/placeholders; name-only matches are not confirmed excluded entities",
+        "Public DOB/address fields remain in originals; omit unnecessary personal identifiers from reports"
+      ]
+    },
+    {
+      "id": "federal-awards",
+      "status": "discovery_candidate",
+      "url": "https://www.usaspending.gov/",
+      "scope": "Recipient awards, subawards and obligation/outlay data",
+      "limitations": [
+        "Agency reference connector is not an awards connector",
+        "API endpoints, rate/cost and source semantics must be verified before integration"
+      ]
+    },
+    {
+      "id": "sba-public-data",
+      "status": "discovery_candidate",
+      "url": "https://data.sba.gov/",
+      "scope": "Program-specific public loan data if available",
+      "limitations": [
+        "No current loan connector implemented",
+        "Do not infer fraud from loan forgiveness or borrower names"
+      ]
+    },
+    {
+      "id": "day-care-licensing",
+      "status": "discovery_candidate",
+      "scope": "Jurisdiction-specific public licensing/subsidy sources, not a presumed national dataset",
+      "limitations": [
+        "Define federal program link first",
+        "Coverage and identifiers vary"
+      ]
+    },
+    {
+      "id": "special-services",
+      "status": "definition_required",
+      "scope": "Must be defined by relevant official program documentation before campaign selection"
+    },
+    {
+      "id": "sam",
+      "status": "conditional",
+      "url": "https://sam.gov/",
+      "limitations": [
+        "Key/account/access requirements require approval and source-specific validation"
+      ]
+    },
+    {
+      "id": "cms-hospice-chow",
+      "status": "implemented_not_preloaded",
+      "command": "fraudlab bulk connector cms-hospice-chow --max-bytes 20000000 --max-rows 200000",
+      "scope": "Catalog-discovered current CMS hospice CHOW transaction CSV; archive/member/Parquet hashes",
+      "limitations": [
+        "CHOW is not necessarily a direct majority transfer",
+        "Snapshot is not complete historical coverage",
+        "Reversible Latin-1 structural decoding; non-ASCII names need encoding validation",
+        "No payment evidence or violation inference"
+      ]
+    },
+    {
+      "id": "cms-hospice-owners",
+      "status": "implemented_not_preloaded",
+      "command": "fraudlab bulk connector cms-hospice-owners --max-bytes 20000000 --max-rows 200000",
+      "scope": "Current CMS hospice ownership-interest snapshot in separate bulk/Parquet store",
+      "limitations": [
+        "Self-reported current roles are not historical control or transaction evidence",
+        "Rows are ownership interests, not unique providers",
+        "Structural encoding only; no normalized name matching"
+      ]
+    },
+    {
+      "id": "cms-hospice-enrollments",
+      "status": "implemented_not_preloaded",
+      "command": "fraudlab bulk connector cms-hospice-enrollments --max-bytes 20000000 --max-rows 200000",
+      "scope": "Current CMS enrollment snapshot plus additional-NPI companion; IDs preserved as strings",
+      "limitations": [
+        "No assumed one-to-one CCN/NPI/enrollment crosswalk",
+        "Current approval is not historical enrollment continuity or proof of billing"
+      ]
+    },
+    {
+      "id": "oig-reinstatements",
+      "status": "implemented_not_preloaded",
+      "command": "fraudlab bulk connector oig-reinstatements --max-bytes 20000000 --max-rows 200000",
+      "scope": "Latest published monthly reinstatement CSV discovered from OIG catalog",
+      "limitations": [
+        "One monthly supplement is not complete reinstatement history",
+        "Do not infer historic eligibility solely from a current exclusion snapshot"
+      ]
+    },
+    {
+      "id": "hhs-medicaid-hcpcs",
+      "status": "discovery_candidate",
+      "url": "https://opendata.hhs.gov/datasets/medicaid-provider-spending/",
+      "scope": "Documented billing/servicing NPI by HCPCS and service-month aggregates; bulk file not acquired",
+      "limitations": [
+        "No Medicaid bulk connector implemented",
+        "Requires bounded large-file source contract",
+        "Suppressed cells and preliminary data; not visits, clinical facts or complete national expenditures"
+      ]
+    }
+  ]
+}
