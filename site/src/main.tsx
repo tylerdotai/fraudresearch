@@ -16,6 +16,7 @@ import './brand.css';
 import './enhancements.css';
 
 const REPO = 'https://github.com/tylerdotai/fraudresearch';
+const SOURCE = `${REPO}/tree/main`;
 const INSTALL = 'hermes profile install github.com/tylerdotai/fraudresearch --name fraudresearch-starter';
 const WORKBENCH = 'git clone https://github.com/tylerdotai/fraudresearch.git\ncd fraudresearch\nuv sync --frozen --group dev';
 const links = [{ label: 'The method', href: '#method' }, { label: 'The toolkit', href: '#toolkit' }, { label: 'Get started', href: '#start' }, { label: 'Questions', href: '#questions' }];
@@ -58,10 +59,10 @@ function App() {
       <div className="shell header-inner">
         <a className="wordmark" href="#" aria-label="FraudResearch home"><img className="graphic-logo" src={`${import.meta.env.BASE_URL}brand-logo.webp`} alt="Eagle and research-lens logo" width="54" height="54" />FraudResearch<span className="wordmark-label">PUBLIC METHODS</span></a>
         <nav className="desktop-nav" aria-label="Main navigation">{links.map(link => <a key={link.href} href={link.href}>{link.label}</a>)}</nav>
-        <Button asChild variant="outline" className="header-source"><a href={REPO}>GitHub <ArrowUpRight aria-hidden="true" /></a></Button>
+        <Button asChild variant="outline" className="header-source"><a href={SOURCE}>GitHub <ArrowUpRight aria-hidden="true" /></a></Button>
         <Sheet><SheetTrigger asChild><Button variant="outline" size="icon" className="mobile-nav-trigger" aria-label="Open navigation"><Menu /></Button></SheetTrigger>
           <SheetContent><SheetHeader><SheetTitle>Navigation</SheetTitle><SheetDescription>Explore the research method and open-source toolkit.</SheetDescription></SheetHeader>
-            <nav className="mobile-links" aria-label="Mobile navigation">{links.map(link => <SheetClose asChild key={link.href}><a href={link.href}>{link.label}<ArrowUpRight aria-hidden="true" /></a></SheetClose>)}<a href={REPO}>GitHub<ArrowUpRight aria-hidden="true" /></a></nav>
+            <nav className="mobile-links" aria-label="Mobile navigation">{links.map(link => <SheetClose asChild key={link.href}><a href={link.href}>{link.label}<ArrowUpRight aria-hidden="true" /></a></SheetClose>)}<a href={SOURCE}>GitHub<ArrowUpRight aria-hidden="true" /></a></nav>
           </SheetContent>
         </Sheet>
       </div>
@@ -72,7 +73,7 @@ function App() {
           <p className="eyebrow"><span />PUBLIC RECORDS. PRIVATE EVIDENCE.</p>
           <h1 id="hero-heading">AI against <span>American</span> <em>fraud.</em></h1>
           <p className="hero-description">Put AI to work for the public interest. Trace the records, challenge the story and help protect America's public programs. Evidence first. Always.</p>
-          <div className="hero-actions"><Button asChild size="lg"><a href="#start">Explore the toolkit <ArrowRight aria-hidden="true" /></a></Button><Button asChild variant="outline" size="lg"><a href={REPO}>View source <ArrowUpRight aria-hidden="true" /></a></Button></div>
+          <div className="hero-actions"><Button asChild size="lg"><a href="#start">Explore the toolkit <ArrowRight aria-hidden="true" /></a></Button><Button asChild variant="outline" size="lg"><a href={SOURCE}>View source <ArrowUpRight aria-hidden="true" /></a></Button></div>
           <a className="hermes-lockup" href="https://hermes-agent.nousresearch.com/"><img src={`${import.meta.env.BASE_URL}nous-girl.svg`} alt="Nous girl, the Hermes host-platform brand mark" width="40" height="40" /><span>POWERED BY <strong>HERMES</strong></span><ArrowUpRight aria-hidden="true" /></a>
           <p className="hero-note">Community built. Research only. Human review required.</p>
         </div>
@@ -95,6 +96,7 @@ function App() {
         <div className="section-intro"><p className="eyebrow">01 / THE METHOD</p><h2 id="method-heading">Curiosity is the start.<br /><em>Proof is the standard.</em></h2><p>FraudResearch helps you organize a defensible investigation. It also helps you recognize when the public record cannot support a conclusion.</p><a className="text-link" href={`${REPO}/blob/main/skills/run-investigations/SKILL.md`}>Read the investigation workflow <ArrowUpRight aria-hidden="true" /></a></div>
         <ol className="method-list">{steps.map((step, index) => <li key={step.title}><span className="step-number">{String(index + 1).padStart(2, '0')}</span><div><h3>{step.title}</h3><p>{step.text}</p></div></li>)}</ol>
       </section>
+      <section className="patriotic-band" aria-label="Project mission"><div className="shell"><div className="mission-banner"><img src={`${import.meta.env.BASE_URL}patriotic-banner.webp`} alt="Fictional eagle illustration flying before an American flag" width="2057" height="765" loading="lazy" /><div className="mission-banner-copy"><p>LESS GUESSWORK.<br /><strong>MORE EVIDENCE.</strong></p><span>AI-assisted research. Human-led accountability.</span></div></div></div></section>
       <section id="toolkit" className="toolkit-section section-space" aria-labelledby="toolkit-heading">
         <div className="shell">
           <div className="section-topline"><div><p className="eyebrow">02 / THE TOOLKIT</p><h2 id="toolkit-heading">Useful tools.<br /><em>Explicit limits.</em></h2></div><p>A Python workbench and a focused Hermes profile. Use them together, or start with the offline example. No evidence is preloaded.</p></div>
@@ -124,8 +126,7 @@ function App() {
           <AccordionItem value="privacy"><AccordionTrigger>Does local storage mean no information leaves my machine?</AccordionTrigger><AccordionContent>No. Your selected model may receive prompts and tool output. Search engines and source websites receive queries or requests. This landing page includes no forms or analytics; GitHub Pages may log hosting requests. <a href={`${REPO}/blob/main/docs/PRIVACY.md`}>Read the full data-flow guide.</a></AccordionContent></AccordionItem>
         </Accordion>
       </div></section>
-      <section className="community-section"><div className="shell community-grid"><div><p className="eyebrow">OPEN METHODS, BETTER QUESTIONS</p><h2>Same public interest.<br /><em>Stronger together.</em></h2><p>Contribute a source correction, a better falsification example or a synthetic test. Keep real subjects and identifying evidence out of public contributions.</p><Button asChild variant="outline" size="lg"><a href={`${REPO}/blob/main/CONTRIBUTING.md`}>Contribute on GitHub <ArrowUpRight aria-hidden="true" /></a></Button></div><img src={`${import.meta.env.BASE_URL}community-duo.webp`} alt="Fictional Nous-inspired character and eagle mascot working together with records and a magnifying glass" width="1254" height="1254" loading="lazy" /></div></section>
-      <section className="patriotic-band" aria-label="Project mission"><div className="shell"><p>LESS GUESSWORK.<br /><strong>MORE EVIDENCE.</strong></p><span>AI-assisted research. Human-led accountability.</span></div></section>
+      <section className="community-section"><div className="shell community-grid"><div><p className="eyebrow">OPEN METHODS, BETTER QUESTIONS</p><h2>Same public interest.<br /><em>Stronger together.</em></h2><p>Contribute a source correction, a better falsification example or a synthetic test. Keep real subjects and identifying evidence out of public contributions.</p><Button asChild variant="outline" size="lg"><a href={`${SOURCE}#help-improve-the-methods`}>Contribute on GitHub <ArrowUpRight aria-hidden="true" /></a></Button></div><img src={`${import.meta.env.BASE_URL}community-duo.webp`} alt="Fictional Nous-inspired character and eagle mascot working together with records and a magnifying glass" width="1254" height="1254" loading="lazy" /></div></section>
     </main>
     <SiteFooter />
     <a href="#method" className="sr-only">Continue to the method <ArrowDown aria-hidden="true" /></a>

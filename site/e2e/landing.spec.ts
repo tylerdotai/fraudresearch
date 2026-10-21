@@ -12,7 +12,7 @@ test('landing page presents a truthful, usable research toolkit', async ({ page 
   await expect(page.getByRole('heading', { level: 1 })).toContainText(/AI against\s*American\s*fraud/i);
   await expect(page.getByRole('img', { name: /Eagle investigator mascot/ })).toBeVisible();
   await expect(page.getByText('Not affiliated with the U.S. government.', { exact: false })).toBeVisible();
-  await expect(page.getByRole('link', { name: 'View source', exact: true })).toHaveAttribute('href', repo);
+  await expect(page.getByRole('link', { name: 'View source', exact: true })).toHaveAttribute('href', repo + '/tree/main');
   const body = await page.locator('body').innerText();
   expect(body).not.toContain('\u2014');
   expect(body).not.toMatch(/\p{Extended_Pictographic}/u);

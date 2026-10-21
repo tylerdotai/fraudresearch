@@ -86,6 +86,7 @@
   "site/components.json",
   "site/e2e/landing.spec.ts",
   "site/e2e/enhancements.spec.ts",
+  "site/e2e/navigation-layout.spec.ts",
   "site/index.html",
   "site/package.json",
   "site/playwright.config.ts",

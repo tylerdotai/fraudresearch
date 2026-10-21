@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-const base = 'https://tylerdotai.github.io/fraudresearch/';
+const base = (process.env.PUBLIC_SITE_URL || process.env.FRAUDRESEARCH_SITE_URL || 'https://aiagainstamericanfraud.com/').replace(/\/?$/, '/');
 
 test('graphic identity, complete footer and mission are present', async ({ page }) => {
   await page.goto('./');
@@ -37,6 +37,7 @@ test('canonical, social, structured data and first-party briefs are truthful', a
   for (const name of ['llms.txt', 'robots.txt', 'sitemap.xml']) {
     const response = await request.get('./' + name);
     expect(response.ok()).toBe(true);
+    expect(await response.text()).toContain(base);
   }
 });
 

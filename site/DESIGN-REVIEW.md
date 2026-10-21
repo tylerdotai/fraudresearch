@@ -29,3 +29,9 @@ Private Playwright screenshots, traces and JSON receipts document the actual run
 Production desktop and mobile runs passed all 18 browser contracts after the changes. Automated axe checks found no violations under the configured WCAG A/AA tags. The first run caught a copy-button contrast regression caused by a composed Tooltip data-slot and a Progress value not forwarded to Radix; both were corrected and the full suite rerun. This is not a complete human accessibility audit.
 
 Visual review confirmed a graphic eagle/research-lens mark, legible metric hierarchy, distinct government attribution, readable source caveats and grouped footer navigation. Original fictional artwork remains visibly separate from evidence claims. Search markup was parsed in the browser; search ranking and external card rendering were not independently verified.
+
+## Follow-up corrections
+
+Expanded production acceptance passed 24 checks, including a 2560px desktop viewport and mobile. The large F's font bearing is optically compensated so headline ink aligns within two CSS pixels. The panorama now retains its natural aspect ratio between the text-led method and toolkit sections; the character pair closes the page without an adjacent second illustrated hero. Desktop/mobile screenshots confirm readable copy and no panoramic cropping.
+
+The latest-main source/contribution entry points and main-branch build-status link are explicit. GitHub's older per-file last-change badge is distinguished from the current branch status; history is not rewritten to hide a previous failed run. Custom-domain canonical/crawler metadata is generated from one public build URL and was exercised in a real production build.

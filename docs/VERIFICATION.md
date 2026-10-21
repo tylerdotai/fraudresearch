@@ -13,7 +13,7 @@ Verified on Linux with Python 3.14.7, uv 0.11.3 and Bun 1.3.14:
 | Research skill graph | Passed; 13 skills and six executable help contracts |
 | Live web and source connectors | Passed in separate scratch stores; five bulk connectors |
 | Isolated installed Hermes profile | Passed fresh six-command offline install/provider/demo run; earlier seven-command live run also exercised native search/extract; no model calls |
-| Production website | Passed; 18 desktop/mobile browser contracts including axe, clipboard, navigation, artwork, government-context figures, structured data and reduced-motion controls |
+| Production website | Passed; 24 desktop/mobile browser contracts including axe, clipboard, navigation, artwork, government-context figures, canonical/crawler consistency, reduced motion, optical headline alignment and separated uncropped illustrations |
 
 These are software acceptance results, not an independent security audit, legal review, clinical assessment or finding of fraud. Raw local receipts are not published because they can contain local paths and acquired records. GitHub Actions independently repeats the deterministic and production-website checks; consult its actual run status rather than treating this table as a future guarantee.
 

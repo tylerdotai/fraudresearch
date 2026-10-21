@@ -3,7 +3,7 @@ import { defineConfig, devices } from '@playwright/test';
 const port = Number(process.env.FRAUDRESEARCH_SITE_PORT || 4179);
 const liveURL = process.env.FRAUDRESEARCH_SITE_URL;
 if (liveURL && new URL(liveURL).protocol !== 'https:') throw new Error('Live acceptance requires an absolute HTTPS URL');
-const baseURL = liveURL || `http://127.0.0.1:${port}/fraudresearch/`;
+const baseURL = liveURL || `http://127.0.0.1:${port}/`;
 const command = process.env.FRAUDRESEARCH_SITE_PREVIEW === '1' ? 'preview' : 'dev';
 
 export default defineConfig({
