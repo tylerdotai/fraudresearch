@@ -24,6 +24,13 @@
   },
   "assets": [
     {
+      "asset": "public/repo-banner.webp",
+      "dimensions": [1800, 720],
+      "sha256": "e9059984f58f746446ba030c4882407fa5b76a5e25d5732533576379d3e46452",
+      "bytes": 233772,
+      "transform": "Wide README composition from community-duo.webp and brand-logo.webp with proportional scaling, full uncropped character art and optically aligned project lettering on fresh RGB pixels; metadata-free WebP re-encoding"
+    },
+    {
       "asset": "public/brand-logo.webp",
       "dimensions": [480, 480],
       "sha256": "dbb3c0142116e3bee717a71f3aa024a958254cd24ae25996c74a7029752a19e7",

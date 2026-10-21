@@ -9,7 +9,7 @@ Verified on Linux with Python 3.14.7, uv 0.11.3 and Bun 1.3.14:
 | Ruff and mypy | Passed; nine workbench source modules type-checked |
 | Original deterministic CLI contracts | Passed; 44 subprocess commands |
 | Bulk and strict-read-only contracts | Passed; 49 subprocess commands |
-| Release and privacy contracts | Passed; 29 subprocess commands, including mascot, logo and social-card metadata rejection |
+| Release and privacy contracts | Passed; 30 subprocess commands, including mascot, logo, social-card and README-banner metadata rejection |
 | Research skill graph | Passed; 13 skills and six executable help contracts |
 | Live web and source connectors | Passed in separate scratch stores; five bulk connectors |
 | Isolated installed Hermes profile | Passed fresh six-command offline install/provider/demo run; earlier seven-command live run also exercised native search/extract; no model calls |

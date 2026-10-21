@@ -1,4 +1,4 @@
-<p align="center"><img src="site/public/patriotic-banner.webp" alt="FraudResearch: AI Against American Fraud" width="100%"></p>
+<p align="center"><img src="site/public/repo-banner.webp" alt="AI Against American Fraud: Hermes-inspired researcher and eagle mascot, an independent community project" width="100%"></p>
 
 <p align="center">
   <img alt="Python 3.11+" src="https://img.shields.io/badge/Python-3.11%2B-3776AB?logo=python&logoColor=white">

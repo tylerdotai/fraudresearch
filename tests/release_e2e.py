@@ -82,8 +82,10 @@ def acceptance():
     manifest = json.loads((candidate / 'release-manifest.json').read_text())
     assert manifest['files'] and all(not Path(p).is_absolute() for p in manifest['files'])
     assert len(list((candidate / 'skills').glob('*/SKILL.md'))) == 13
+    assert 'site/public/repo-banner.webp' in (candidate / 'README.md').read_text().splitlines()[0]
+    assert (candidate / 'site/public/repo-banner.webp').is_file()
     # Explicitly approved generated graphics must be stripped of hidden metadata.
-    for filename in ('eagle-mascot.webp', 'brand-logo.webp', 'social-card.webp'):
+    for filename in ('eagle-mascot.webp', 'brand-logo.webp', 'social-card.webp', 'repo-banner.webp'):
         relative = 'site/public/' + filename
         graphic = candidate / relative
         graphic_bytes = graphic.read_bytes()

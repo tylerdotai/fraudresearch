@@ -16,7 +16,8 @@ FORBIDDEN = {'data', 'artifacts', 'sessions', 'memories', 'logs', 'cache', '.git
              '__pycache__', 'cron', 'vault', 'mcp-tokens', 'node_modules', 'backups'}
 BINARY_GRAPHICS = {'site/public/eagle-mascot.webp', 'site/public/nous-mascot.webp',
                    'site/public/community-duo.webp', 'site/public/patriotic-banner.webp',
-                   'site/public/brand-logo.webp', 'site/public/social-card.webp'}
+                   'site/public/brand-logo.webp', 'site/public/social-card.webp',
+                   'site/public/repo-banner.webp'}
 PATTERNS = {
     'personal-home-path': r'/(?:home|Users)/[A-Za-z0-9_.-]+',
     'windows-home-path': r'[A-Za-z]:\\(?:Users|Documents and Settings)\\[^\\\s]+',
