@@ -25,6 +25,8 @@ FRAUDRESEARCH_SITE_PREVIEW=1 bun run test:e2e
 
 The production base path is `/fraudresearch/`. Tests start a strict loopback server on port 4179; override FRAUDRESEARCH_SITE_PORT if needed. They never take over another server. Playwright traces, screenshots, JSON results and the HTML report stay in ignored test-results/ and playwright-report/.
 
+To repeat the same checks against the deployed site without starting a local server, run `FRAUDRESEARCH_SITE_URL=https://tylerdotai.github.io/fraudresearch/ bun run test:e2e`. The no-third-party-request assertion permits only the configured origin, including its protocol and port. Receipts remain local.
+
 Browser tests cover desktop/mobile layouts, source and install links, clipboard, mobile navigation, keyboard entry, real shadcn controls, axe accessibility, artwork loading, copy constraints and absence of automatic third-party requests. Automated accessibility checks are not a full human accessibility audit.
 
 The page includes no forms, uploads, analytics or tip intake. GitHub Pages can log hosting requests. Links to GitHub, Hermes and official government guidance navigate only when the visitor chooses them.

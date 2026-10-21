@@ -61,11 +61,13 @@ test('has no automatically detectable accessibility violations', async ({ page }
   expect(results.violations).toEqual([]);
 });
 
-test('is static and does not contact third-party services on load', async ({ page }) => {
+test('is static and does not contact third-party services on load', async ({ page, baseURL }) => {
+  if (!baseURL) throw new Error('A configured baseURL is required');
+  const permittedOrigin = new URL(baseURL).origin;
   const external: string[] = [];
   page.on('request', (request) => {
     const url = new URL(request.url());
-    if (url.protocol.startsWith('http') && !['127.0.0.1', 'localhost'].includes(url.hostname)) external.push(url.hostname);
+    if (url.protocol.startsWith('http') && url.origin !== permittedOrigin) external.push(url.hostname);
   });
   await page.goto('./');
   await page.waitForLoadState('networkidle');
