@@ -45,6 +45,10 @@ The design review covers graphic identity, factual hierarchy, footer navigation,
 
 ## Deployment
 
+### Missing pages
+
+The build emits a standalone branded `404.html` for GitHub Pages' native missing-page handling. It has no JavaScript, returns recovery links to the configured site path, and uses root-relative artwork so nested missing URLs do not break assets. It carries `noindex,follow`, is not added to the sitemap, and never reflects the requested address or query into its HTML. Development and production-preview middleware return the same page with HTTP 404 instead of Vite's normal homepage fallback; live acceptance verifies GitHub's actual status and no-JavaScript recovery.
+
 The repository workflow builds and tests the static site, then deploys the generated `dist/` artifact to GitHub Pages on an approved main-branch push. Source and dependencies are locked. No live fraud-data scans or scheduled research run in CI. System dependency installs, when present, occur on disposable GitHub-hosted runners, not the operator's workstation.
 
 ## Custom-domain migration
